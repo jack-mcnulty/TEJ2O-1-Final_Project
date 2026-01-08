@@ -1,10 +1,12 @@
 {
-    "name": "TEJ2O ⇢ Unit Final Project",
+    "name": "TEJ2O ⇢  Final Project",
     "description": "",
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "robotbit": "github:kittenbot/pxt-robotbit#v0.4.8",
+        "servo": "*"
     },
     "files": [
         "main.ts",
