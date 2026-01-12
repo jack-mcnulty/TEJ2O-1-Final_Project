@@ -10,15 +10,13 @@ basic.clearScreen()
 basic.showIcon(IconNames.Tortoise)
 
 while (true) {
-// spike wheel turning
-robotbit.StepperDegree(robotbit.Steppers.M1, 1000)
-// character jump
-input.onButtonPressed(Button.A, function() {
-    servos.P1.setAngle(90)
-    basic.pause(450)
-    servos.P1.setAngle(0)
-})
+    // spike wheel turning
+    robotbit.StepperDegree(robotbit.Steppers.M1, 1)
+    // character jump
+    input.onButtonPressed(Button.A, function() {
+        servos.P1.setAngle(90)
+        basic.pause(450)
+        servos.P1.setAngle(0)
+    })
 }
-
-
             
