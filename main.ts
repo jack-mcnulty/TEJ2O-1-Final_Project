@@ -5,9 +5,13 @@
  * This program makes a game with a stepper motor and a servo
 */
 
+// variables
+let score : number = 0          
+
 //setup
 basic.clearScreen()
 basic.showIcon(IconNames.Tortoise)
+basic.showNumber(score)
 
 while (true) {
     // spike wheel turning
@@ -17,6 +21,8 @@ while (true) {
         servos.P1.setAngle(90)
         basic.pause(450)
         servos.P1.setAngle(0)
-    })
+        score += 1
+        basic.showNumber(score)
+    })      
 }
             
