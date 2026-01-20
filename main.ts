@@ -11,18 +11,26 @@ let score : number = 0
 //setup
 basic.clearScreen()
 basic.showIcon(IconNames.Tortoise)
+
+//setup
+basic.clearScreen()
+basic.showIcon(IconNames.Tortoise)
 basic.showNumber(score)
 
 while (true) {
-    // spike wheel turning
+// spike wheel turning
     robotbit.StepperDegree(robotbit.Steppers.M1, 1)
-    // character jump
+
+// character jump
     input.onButtonPressed(Button.A, function() {
-        servos.P1.setAngle(90)
-        basic.pause(450)
+        servos.P1.setAngle(45)
+        basic.pause(1500)
         servos.P1.setAngle(0)
         score += 1
         basic.showNumber(score)
-    })      
+        if (score > 10) {
+            basic.showString('You Win!')
+            robotbit.MotorStopAll()
+    }
+})
 }
-            
